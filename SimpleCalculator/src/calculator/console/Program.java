@@ -21,7 +21,7 @@ public class Program {
 				new RealValueParser() };
 		AbstractValueParser parser = inputValueParser();
 		System.out.println("Calculator operating in '" + parser.getDatatypeName()
-				+ "'");
+				+ "' "+parser.getOperators());
 		calc = new Calculator(parser);
 	}
 

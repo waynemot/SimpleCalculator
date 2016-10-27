@@ -19,5 +19,10 @@ public class IntegerValueParser implements AbstractValueParser {
 	public String getDatatypeName() {
 		return "Integer mode";
 	}
+	
+	@Override
+	public String getOperators() {
+		return "operators are: + - * / % ^";
+	}
 
 }

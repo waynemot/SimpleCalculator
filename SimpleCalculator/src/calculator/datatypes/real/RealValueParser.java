@@ -19,7 +19,11 @@ public class RealValueParser implements AbstractValueParser {
 	public String getDatatypeName() {
 		return "Real number mode";
 	}
-
+	
+    @Override
+    public String getOperators() {
+    	return "operators: + - * / ^";
+    }
 
 
 }

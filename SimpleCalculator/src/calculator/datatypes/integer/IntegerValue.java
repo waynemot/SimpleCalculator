@@ -48,5 +48,16 @@ public class IntegerValue extends AbstractValue {
 			throw new RemainderByZeroException();
 		return new IntegerValue(value / intValue);
 	}
+	
+	@Override
+	public AbstractValue pow(AbstractValue operand) {
+		int rval = 0;
+		int intValue = ((IntegerValue) operand).value;
+		double dret = Math.pow((double)value, (double)intValue);
+		long lval = Math.round(dret);
+		if(lval > Integer.MAX_VALUE) rval = Integer.MAX_VALUE;
+		else rval = (int)lval;
+		return (new IntegerValue(rval));
+	}
 
 }

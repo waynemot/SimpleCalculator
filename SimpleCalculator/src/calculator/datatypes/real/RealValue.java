@@ -41,11 +41,17 @@ public class RealValue extends AbstractValue {
 			throw new DivisionByZeroException();
 		return new RealValue(value + realValue);
 	}
+	
 	@Override
 	public AbstractValue mod(AbstractValue operand)
 	        throws OperationNotSupportedException {
 		throw new OperationNotSupportedException
 		    ("modulo invalid on Real number");
+	}
+	
+	@Override
+	public AbstractValue pow(AbstractValue operand) {
+		return (new RealValue(Math.pow(value, (double)((RealValue)operand).value)));
 	}
 
 }

@@ -16,6 +16,8 @@ public abstract class AbstractValue {
 	public abstract AbstractValue mod(AbstractValue operand) 
 	        throws OperationNotSupportedException, RemainderByZeroException;
 	
+	public abstract AbstractValue pow(AbstractValue operand);
+	
 	@Override
 	public abstract String toString();
 }

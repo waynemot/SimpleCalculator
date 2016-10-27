@@ -27,9 +27,10 @@ public class Calculator {
 			return left.div(right);
 		if (operation.equals("*"))
 			return left.mul(right);
-		if (operation.equals("%")) {
+		if (operation.equals("%"))
 			return left.mod(right);
-		}
+		if (operation.equals("^"))
+			return left.pow(right);
 		throw new OperationNotSupportedException(operation);
 	}
 }

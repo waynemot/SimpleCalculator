@@ -1,5 +1,6 @@
 package calculator;
 
+@SuppressWarnings("serial")
 public class RemainderByZeroException extends Exception {
 
 	public RemainderByZeroException() {
