@@ -2,6 +2,7 @@ package calculator.datatypes.real;
 
 import calculator.AbstractValue;
 import calculator.DivisionByZeroException;
+import calculator.OperationNotSupportedException;
 
 public class RealValue extends AbstractValue {
 
@@ -39,6 +40,12 @@ public class RealValue extends AbstractValue {
 		if (realValue == 0.0)
 			throw new DivisionByZeroException();
 		return new RealValue(value + realValue);
+	}
+	@Override
+	public AbstractValue mod(AbstractValue operand)
+	        throws OperationNotSupportedException {
+		throw new OperationNotSupportedException
+		    ("modulo invalid on Real number");
 	}
 
 }

@@ -9,7 +9,7 @@ public class Calculator {
 	}
 
 	public String calculate(String arg1, String operation, String arg2)
-			throws DivisionByZeroException,
+			throws DivisionByZeroException, RemainderByZeroException,
 			ParseValueException, OperationNotSupportedException {
 		AbstractValue left = valueParser.parse(arg1);
 		AbstractValue right = valueParser.parse(arg2);
@@ -17,7 +17,8 @@ public class Calculator {
 	}
 
 	private AbstractValue calculate(AbstractValue left, String operation,
-			AbstractValue right) throws DivisionByZeroException, OperationNotSupportedException {
+			AbstractValue right) throws DivisionByZeroException, 
+	        RemainderByZeroException, OperationNotSupportedException {
 		if (operation.equals("+"))
 			return left.add(right);
 		if (operation.equals("-"))
@@ -26,6 +27,9 @@ public class Calculator {
 			return left.div(right);
 		if (operation.equals("*"))
 			return left.mul(right);
+		if (operation.equals("%")) {
+			return left.mod(right);
+		}
 		throw new OperationNotSupportedException(operation);
 	}
 }
