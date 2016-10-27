@@ -1,0 +1,13 @@
+A simple calculator program in Java
+
+The intent of this project is to provide a very simple
+calculator program that students can use for several
+learning exercises in software engineering.  
+
+The intent is to use this subject as the basis for creating:
+
+1. JUnit/testNG tests of methods and classes exercises
+2. Javadoc exercises
+3. "Blackbox" and "Whitebox" testing exercises
+4. Fault Insertion/Mutation exercises
+
