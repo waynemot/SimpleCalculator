@@ -25,12 +25,12 @@ public class RealValue extends AbstractValue {
 
 	@Override
 	public AbstractValue sub(AbstractValue operand) {
-		return new RealValue(value + ((RealValue) operand).value);
+		return new RealValue(value - ((RealValue) operand).value);
 	}
 
 	@Override
 	public AbstractValue mul(AbstractValue operand) {
-		return new RealValue(value + ((RealValue) operand).value);
+		return new RealValue(value * ((RealValue) operand).value);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class RealValue extends AbstractValue {
 		double realValue = ((RealValue) operand).value;
 		if (realValue == 0.0)
 			throw new DivisionByZeroException();
-		return new RealValue(value + realValue);
+		return new RealValue(value / realValue);
 	}
 	
 	@Override
