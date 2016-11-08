@@ -27,9 +27,9 @@ public class Program {
 
 	private AbstractValueParser inputValueParser() {
 		showChoises();
-		int choise = scanner.nextInt();
-		if (choise >= 1 && choise <= valueParsers.length)
-			return valueParsers[choise - 1];
+		int choice = scanner.nextInt();
+		if (choice >= 1 && choice <= valueParsers.length)
+			return valueParsers[choice - 1];
 		else {
 			System.out.println("Enter a valid selection!");
 			return inputValueParser();
